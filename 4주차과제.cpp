@@ -11,29 +11,29 @@ private:
     double hp;
 
 public:
-    Car() : name(), cc(0), hp(0) {}
+    Car() : name(), cc(0), hp(0){}
     Car(string name, double cc, double hp) : name(name), cc(cc), hp(hp) {}
 
-    string Getname() {
+    string GetName() {
         return name;
     }
-    void Setname(string name_) {
+    void SetName(string name_) {
         name = name_;
     }
 
-    double Getkm() {
+    double GetKm() {
         return cc;
     }
 
-    void Setkm(double cc_) {
+    void SetKm(double cc_) {
         cc = cc_;
     }
 
-    double Gethp() {
+    double GetHp() {
         return hp;
     }
 
-    void Sethp(double hp_) {
+    void Setp(double hp_) {
         hp = hp_;
     }
 
@@ -41,13 +41,14 @@ public:
 
 int main() {
     Car c1{ "2021 Mohabi",2959,260 };
-    Car c2{ "2021 K7 ÇÏÀÌºê¸®µå",2359,159 };
+    Car c2{ "2021 K7 í•˜ì´ë¸Œë¦¬ë“œ",2359,159 };
     Car c3{ "2021 K5",1598,180 };
-    Car c4{ "2021 ½ºÆ÷Æ¼Áö",1598,136 };
-
-    cout << "[ KIA ]\n¸ğµ¨¸í: " << c1.Getname() << "\n" << "¹è±â·®:" << c1.Getkm() << " cc\n" << "ÃÖ´ëÃâ·Â:" << c1.Gethp() << " hp\n" << endl;
-    cout << "[ KIA ]\n¸ğµ¨¸í: " << c2.Getname() << "\n" << "¹è±â·®:" << c2.Getkm() << " cc\n" << "ÃÖ´ëÃâ·Â:" << c2.Gethp() << " hp\n" << endl;
-    cout << "[ KIA ]\n¸ğµ¨¸í: " << c3.Getname() << "\n" << "¹è±â·®:" << c3.Getkm() << " cc\n" << "ÃÖ´ëÃâ·Â:" << c3.Gethp() << " hp\n" << endl;
-    cout << "[ KIA ]\n¸ğµ¨¸í: " << c4.Getname() << "\n" << "¹è±â·®:" << c4.Getkm() << " cc\n" << "ÃÖ´ëÃâ·Â:" << c4.Gethp() << " hp\n" << endl;
+    Car c4{ "2021 ìŠ¤í¬í‹°ì§€",1598,136 };
+    
+   
+    cout << "[ KIA ]\nëª¨ë¸ëª…: " << c1.GetName() << "\n" << "ë°°ê¸°ëŸ‰:" << c1.GetKm() << " cc\n" << "ìµœëŒ€ì¶œë ¥:" << c1.GetHp() << " hp\n" << endl;
+    cout << "[ KIA ]\nëª¨ë¸ëª…: " << c2.GetName() << "\n" << "ë°°ê¸°ëŸ‰:" << c2.GetKm() << " cc\n" << "ìµœëŒ€ì¶œë ¥:" << c2.GetHp() << " hp\n" << endl;
+    cout << "[ KIA ]\nëª¨ë¸ëª…: " << c3.GetName() << "\n" << "ë°°ê¸°ëŸ‰:" << c3.GetKm() << " cc\n" << "ìµœëŒ€ì¶œë ¥:" << c3.GetHp() << " hp\n" << endl;
+    cout << "[ KIA ]\nëª¨ë¸ëª…: " << c4.GetName() << "\n" << "ë°°ê¸°ëŸ‰:" << c4.GetKm() << " cc\n" << "ìµœëŒ€ì¶œë ¥:" << c4.GetHp() << " hp\n" << endl;
 
 }
