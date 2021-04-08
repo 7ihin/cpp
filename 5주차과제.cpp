@@ -16,12 +16,12 @@ class Dog : public Animal
 
 public:
 	void Gosu() {
-		cout << "´Ù¸®´Â 4°³\n";
-		cout << "°£½ÄÀº °³²­\n";
+		cout << "ë‹¤ë¦¬ê°¯ìˆ˜ = 4ê°œ\n";
+		cout << "í‰ê· ìˆ˜ëª… = 13ë…„\n";
 		return;
 	}
 	void Cry() {
-		cout << "¸Û¸Û\n" << endl; return;
+		cout << "ë©ë©\n" << endl; return;
 	}
 
 };
@@ -31,12 +31,12 @@ class Bird : public Animal
 
 public:
 	void Gosu() {
-		cout << "´Ù¸®´Â 2°³\n";
-		cout << "°£½ÄÀº »õ¿ì±ø\n";
+		cout << "ë‹¤ë¦¬ê°¯ìˆ˜ = 2ê°œ\n";
+		cout << "í‰ê· ìˆ˜ëª… = 2\n";
 		return;
 	}
 	void Cry() {
-		cout << "Â±Â±\n" << endl; return;
+		cout << "ì§¹ì§¹\n" << endl; return;
 	};
 
 };
@@ -46,12 +46,12 @@ class Cat : public Animal
 
 public:
 	void Gosu() {
-		cout << "´Ù¸®´Â 4°³\n";
-		cout << "°£½ÄÀº Ãò¸£\n";
+		cout << "ë‹¤ë¦¬ê°œìˆ˜ = 4\n";
+		cout << "í‰ê· ìˆ˜ëª… = 15\n";
 		return;
 	}
 	void Cry() {
-		cout << "³Ä¿ë\n" << endl; return;
+		cout << "ì•¼ì˜¹\n" << endl; return;
 	};
 
 };
