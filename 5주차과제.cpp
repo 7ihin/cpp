@@ -32,7 +32,7 @@ class Bird : public Animal
 public:
 	void Gosu() {
 		cout << "다리갯수 = 2개\n";
-		cout << "평균수명 = 2\n";
+		cout << "평균수명 = 2년\n";
 		return;
 	}
 	void Cry() {
@@ -47,7 +47,7 @@ class Cat : public Animal
 public:
 	void Gosu() {
 		cout << "다리개수 = 4\n";
-		cout << "평균수명 = 15\n";
+		cout << "평균수명 = 15년\n";
 		return;
 	}
 	void Cry() {
