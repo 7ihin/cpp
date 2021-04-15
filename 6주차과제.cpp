@@ -1,80 +1,84 @@
 #include <iostream>
-
 using namespace std;
-
-class Animal
-{
-
+class Animal {
 public:
-	virtual void Cry() = 0;
-	virtual void Gosu() = 0;
+    Animal() {
+        cout << "constructor for Animal activated\n";
+    }
+    virtual void Cry() = 0;
+    ~Animal() {
+        cout << "constructor for Animal activated\n";
+    }
 
 };
 
-class Dog : public Animal
-{
-
+class Dog : public Animal {
 public:
-	void Gosu() {
-		cout << "´Ù¸®´Â 4°³\n";
-		cout << "°£½ÄÀº °³²­\n";
-		return;
-	}
-	void Cry() {
-		cout << "¸Û¸Û\n" << endl; return;
-	}
-
+    Dog() {
+        cout << "constructor for Dog activated\n";
+    }
+    virtual void Cry() {
+        cout << "Â¸Ã›Â¸Ã›\n"; return;
+    }
+    ~Dog() {
+        cout << "destructor for Dog activated\n";
+    }
 };
 
-class Bird : public Animal 
-{
-
+class Bird : public Animal {
 public:
-	void Gosu() {
-		cout << "´Ù¸®´Â 2°³\n";
-		cout << "°£½ÄÀº »õ¿ì±ø\n";
-		return;
-	}
-	void Cry() {
-		cout << "Â±Â±\n" << endl; return;
-	};
-
+    Bird() {
+        cout << "constructor for Bird activated\n";
+    }
+    virtual void Cry() {
+        cout << "Ã‚Â±Ã‚Â±\n"; return;
+    }
+    ~Bird() {
+        cout << "destructor for Bird activated\n";
+    }
 };
 
-class Cat : public Animal 
-{
-
+class Cat : public Animal {
 public:
-	void Gosu() {
-		cout << "´Ù¸®´Â 4°³\n";
-		cout << "°£½ÄÀº Ãò¸£\n";
-		return;
-	}
-	void Cry() {
-		cout << "³Ä¿ë\n" << endl; return;
-	};
-
+    Cat() {
+        cout << "constructor for Cat activated\n";
+    }
+    virtual void Cry() {
+        cout << "Â¾ÃŸÂ¿Ã‹Â¾ÃŸÂ¿Ã‹\n"; return;
+    }
+    ~Cat() {
+        cout << "destructor for Cat activated\n";
+    }
 };
+
+
+
 
 int main()
 {
-	Animal* pa = new Dog;
-	Animal* pb = new Bird;
-	Animal* pc = new Cat;
-	pa->Gosu();
-	pa->Cry();
-	pb->Gosu();
-	pb->Cry();
-	pc->Gosu();
-	pc->Cry();
 
-	Dog* pd = (Dog*)pa;
-	pd->Cry();
+    Animal* arr[6];
+    arr[0] = new Dog;
+    arr[1] = new Dog;
+    arr[2] = new Bird;
+    arr[3] = new Bird;
+    arr[4] = new Cat;
+    arr[5] = new Cat;
+    Animal* Animal_pointer = *arr;
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 1);
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 2);
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 3);
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 4);
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 5);
+    Animal_pointer->Cry();
 
-	Bird* pe = (Bird*)pb;
-	pb->Cry();
 
-	Cat* pf = (Cat*)pc;
-	pc->Cry();
-	return 0;
+
+
+    return 0;
 }
